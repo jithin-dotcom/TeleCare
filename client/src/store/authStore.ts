@@ -1,57 +1,5 @@
 
 
-
-// import { create } from "zustand";
-// import { persist } from "zustand/middleware";
-
-// type User = {
-//   _id: string;
-//   name: string;
-//   email: string;
-// };
-
-// type AuthData = {
-//   user: User | null;
-//   accessToken: string | null;
-// };
-
-// type AuthState = AuthData & {
-//   setAuth: (data: AuthData) => void;
-//   logout: () => void;
-//   hasHydrated: boolean;
-//   setHydrated: (value: boolean) => void;
-// };
-
-// export const useAuthStore = create<AuthState>()(
-//   persist(
-//     (set) => ({
-//       user: null,
-//       accessToken: null,
-//       setAuth: (data) =>
-//         set({ user: data.user, accessToken: data.accessToken }),
-//       logout: () => {
-//         set({ user: null, accessToken: null });
-//         localStorage.removeItem("auth-storage");
-//       },
-//       hasHydrated: false,
-//       setHydrated: (value: boolean) => set({ hasHydrated: value }),
-//     }),
-//     {
-//       name: "auth-storage",
-//       partialize: (state) => ({
-//         user: state.user,
-//         accessToken: state.accessToken,
-//       }),
-//       onRehydrateStorage: () => (state) => {
-//         state?.setHydrated(true);
-//       },
-//     }
-//   )
-// );
-
-
-
-
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 

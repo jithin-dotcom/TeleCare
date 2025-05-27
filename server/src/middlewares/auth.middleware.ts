@@ -28,7 +28,7 @@ export const verifyAccessToken = (
 
     const decoded = jwt.verify(token, ACCESS_TOKEN_SECRET) as JwtPayload;
 
-    // Attach user data to request object
+    
     (req as any).user = {
       id: decoded.id,
       email: decoded.email,

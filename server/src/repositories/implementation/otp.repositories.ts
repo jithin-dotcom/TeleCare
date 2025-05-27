@@ -1,16 +1,3 @@
-// import { OtpModel } from "../../models/otp.models";
-
-// export class OtpRepository {
-//     async createOtp(email: string, otp: string): Promise<void>{
-//         await OtpModel.create({email,otp});
-//     }
-
-//     async findOtp(email: string): Promise<Document|null>{
-//         return await OtpModel.findOne({email});
-//     }
-// } 
-
-
 
 
 import { OtpModel } from "../../models/otp.models";

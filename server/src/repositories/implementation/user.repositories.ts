@@ -1,12 +1,12 @@
 import { UserModel } from "../../models/user.models";
 import { IUser } from "../../types/user.type";
 import { IUserInterface } from "../interface/IUserInterface";
-// import { HydratedDocument } from "mongoose";
-import type { Document, Types } from "mongoose";
+
+import type { Document } from "mongoose";
 
 
 
-export class UserRepository implements IUserInterface {      // Promise<(IUser & Document) | null>
+export class UserRepository implements IUserInterface {      
   async findByEmail(email: string): Promise<(IUser & Document) | null> {
     return await UserModel.findOne({ email });
   }
@@ -20,8 +20,7 @@ export class UserRepository implements IUserInterface {      // Promise<(IUser &
     await UserModel.updateOne({ email }, { $set: { password: hashedPassword } });
   }
 
-  // async findById(id: string): Promise<(IUser & Document) | null> {
-  // return await UserModel.findById(id);
+  
 }
 
 

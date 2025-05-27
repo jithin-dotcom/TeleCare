@@ -1,6 +1,6 @@
-import { UserModel } from "../../models/user.models";
+
 import { IUser } from "../../types/user.type";
-import type { Document, Types } from "mongoose";
+import type { Document } from "mongoose";
 
 
 export interface IUserInterface {

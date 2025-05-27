@@ -1,27 +1,5 @@
 
 
-// const Dashboard = () => {
-//   return (
-//     <div>
-//         <h1 className="text-3xl font-bold underline">
-//             Admin Dashboard
-//         </h1>
-//     </div>
-//   )
-// }
-
-// export default Dashboard
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
 import { useAuthStore } from "../../store/authStore";
 import { useNavigate } from "react-router-dom";

@@ -1,9 +1,5 @@
 
 
-
-
-
-// pages/auth/ForgotPassword.tsx
 import React, { useState } from "react";
 import axios, { isAxiosError } from "axios";
 import { toast } from "react-toastify";
@@ -18,10 +14,9 @@ const ForgotPassword: React.FC = () => {
     try {
       await axios.post("/api/auth/forgot-password", { email });
       toast.success("OTP sent to your email");
-      localStorage.setItem("forgotEmail", email); // store for next steps
+      localStorage.setItem("forgotEmail", email); 
       navigate("/verify-forgot-password");
     }catch (err: unknown) {
-      // toast.error(err.response?.data?.message || "Error sending OTP");
        if(isAxiosError(err)){
          toast.error(err.response?.data?.message || "Error sending OTP");
        }else{
